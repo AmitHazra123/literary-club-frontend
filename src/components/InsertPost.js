@@ -12,7 +12,8 @@ class InsertPost extends Component {
       description: "",
       writer: "",
       imageFile: [],
-      pdfFile: []
+      pdfFile: [],
+      isLoading: false
     };
     this.onChange = this.onChange.bind(this);
     this.onChangeFile = this.onChangeFile.bind(this);
@@ -20,7 +21,10 @@ class InsertPost extends Component {
   }
 
   componentWillReceiveProps(props) {
-    // console.log(props.post);
+    if (props.posts.length > 0) {
+      this.setState({ isLoading: false });
+      window.location.href = "/admin";
+    }
   }
 
   onChange(e) {
@@ -49,11 +53,15 @@ class InsertPost extends Component {
         this.state.imageFile[0],
         this.state.imageFile[0].name
       );
+    this.setState({
+      isLoading: true
+    });
     this.props.uploadPost(fd);
-    window.location.href = "/admin";
   }
 
   render() {
+    const { isLoading } = this.state;
+
     return (
       <div>
         <div id="login-form">
@@ -108,8 +116,21 @@ class InsertPost extends Component {
               />
             </div>
             <center>
-              <button type="submit" className="btn btn-primary">
-                Upload
+              {isLoading ? <p>Loading... Please stay on this page!</p> : ""}
+              <button
+                type="submit"
+                className={
+                  isLoading ? "btn btn-primary disabled" : "btn btn-primary"
+                }
+              >
+                Upload{" "}
+                {isLoading ? (
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                ) : (
+                  ""
+                )}
               </button>
             </center>
           </form>
@@ -121,11 +142,13 @@ class InsertPost extends Component {
 
 InsertPost.propTypes = {
   error: PropTypes.object.isRequired,
+  posts: PropTypes.object.isRequired,
   uploadPost: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
-  error: state.error
+  error: state.error,
+  posts: state.postReducer.posts
 });
 
 export default connect(mapStateToProps, { uploadPost })(InsertPost);
