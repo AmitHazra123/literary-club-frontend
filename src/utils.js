@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = {
-  BASE_URL: "http://localhost:4040",
+  BASE_URL: "https://literaryclub.herokuapp.com",
   LOGIN: "/auth",
   GET_POSTS: "/posts",
   GET_POST: "/posts/",
