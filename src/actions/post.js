@@ -85,6 +85,7 @@ export const getPost = postId => dispatch => {
 };
 
 export const uploadPost = post => dispatch => {
+  // upload
   axios
     .post(api.BASE_URL + api.UPLOAD_POST, post)
     .then(res => {
