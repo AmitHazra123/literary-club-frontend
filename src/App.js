@@ -18,6 +18,7 @@ import InsertPost from "./components/InsertPost";
 import { setAuthToken } from "./utils";
 import Feeds from "./components/Feeds";
 import TeamProfile from "./components/TeamProfile";
+import ContactUs from "./components/ContactUs";
 
 const history = createBrowserHistory();
 
@@ -47,6 +48,7 @@ function App() {
             <Route exact path="/post/:id" component={Post} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/about" component={AboutPage} />
+            <Route exact path="/contactus" component={ContactUs} />
             <Switch>
               <PrivateRoute exact path="/admin" component={AdminPage} />
               <PrivateRoute exact path="/insert" component={InsertPost} />

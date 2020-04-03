@@ -25,7 +25,7 @@ class UpdatePost extends Component {
   }
 
   componentWillReceiveProps(props) {
-    console.log(props.post);
+    // console.log(props.post);
   }
 
   onChange(e) {
@@ -43,6 +43,9 @@ class UpdatePost extends Component {
   onSubmit(e) {
     e.preventDefault();
     let fd = new FormData(e.target);
+    fd.append("title", this.state.title);
+    fd.append("description", this.state.description);
+    fd.append("writer", this.state.writer);
     if (this.state.pdfFile.length > 0)
       fd.append("pdfUrl", this.state.pdfFile[0], this.state.pdfFile[0].name);
     if (this.state.imageFile.length > 0)
@@ -51,9 +54,6 @@ class UpdatePost extends Component {
         this.state.imageFile[0],
         this.state.imageFile[0].name
       );
-    fd.append("title", this.state.title);
-    fd.append("description", this.state.description);
-    fd.append("writer", this.state.writer);
     const postId = this.props.match.params.id;
     this.props.updatePost(postId, fd);
     window.location.href = "/admin";

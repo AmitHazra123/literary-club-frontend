@@ -41,35 +41,15 @@ class Feeds extends Component {
     return (
       <div>
         <div id="wrapper" className="fade-in">
-          <div id="intro">
-            <h1>
-              This is
-              <br />
-              Post Feed
-            </h1>
-
-            <ul className="actions">
-              <li>
-                <a href="/" className="button solid solo">
-                  <i class="fa fa-arrow-down"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <header id="header">
-            <a href="index.html" className="logo">
-              Feeds
-            </a>
-          </header>
+          <header id="header"></header>
 
           <nav id="nav">
             <ul className="links">
               <li className="active">
-                <a href="feeed.html">POSTS</a>
+                <a href="/feeds">POSTS</a>
               </li>
               <li>
-                <a href="contact.html">CONTACT US</a>
+                <a href="/contactus">CONTACT US</a>
               </li>
             </ul>
             <ul className="icons">
@@ -93,10 +73,10 @@ class Feeds extends Component {
                   <header>
                     <span className="date">{post.title}</span>
                     <h2>
-                      <a href="/">{post.title}</a>
+                      <a href={"/post/" + post._id}>{post.title}</a>
                     </h2>
                   </header>
-                  <a href="/" className="image fit">
+                  <a href={"/post/" + post._id} className="image fit">
                     <img src={post.imageUrl} alt="" />
                   </a>
                   <p>{post.description}</p>
