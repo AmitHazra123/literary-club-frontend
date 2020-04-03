@@ -25,7 +25,11 @@ class UpdatePost extends Component {
   }
 
   componentWillReceiveProps(props) {
-    // console.log(props.post);
+    this.setState({
+      title: props.post.title,
+      description: props.post.description,
+      writer: props.post.writer
+    });
   }
 
   onChange(e) {
@@ -42,7 +46,7 @@ class UpdatePost extends Component {
 
   onSubmit(e) {
     e.preventDefault();
-    let fd = new FormData(e.target);
+    let fd = new FormData();
     fd.append("title", this.state.title);
     fd.append("description", this.state.description);
     fd.append("writer", this.state.writer);
@@ -76,8 +80,9 @@ class UpdatePost extends Component {
             </div>
             <div className="form-group">
               <label htmlFor="exampleInputPassword1">Description</label>
-              <input
+              <textarea
                 type="text"
+                style={{ height: 100 }}
                 className="form-control"
                 name="description"
                 value={this.state.description}
@@ -112,9 +117,11 @@ class UpdatePost extends Component {
                 onChange={this.onChangeFile}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
-              Upload Post
-            </button>
+            <center>
+              <button type="submit" className="btn btn-primary">
+                Update
+              </button>
+            </center>
           </form>
         </div>
       </div>

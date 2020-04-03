@@ -35,20 +35,37 @@ class AdminPage extends Component {
         <div id="wrapper" className="fade-in">
           <header id="header"></header>
 
+          <nav id="nav">
+            <ul class="links">
+              <li class="active">
+                <a href="/admin">POSTS</a>
+              </li>
+              <li>
+                <a href="/insert">UPLOAD POST</a>
+              </li>
+            </ul>
+          </nav>
           <div id="main">
             <section className="posts">
               {posts.map(post => (
                 <article>
                   <header>
-                    <span className="date">{post.title}</span>
                     <h2>
-                      <a href="/">{post.title}</a>
+                      <a href={"/post/" + post._id}>{post.title}</a>
                     </h2>
+                    <span className="date">{post.writer}</span>
                   </header>
-                  <a href="/" className="image fit">
+                  <a href={"/post/" + post._id} className="image fit">
                     <img src={post.imageUrl} alt="" />
                   </a>
-                  <p>{post.description}</p>
+                  <p>
+                    <center>{post.description}</center>
+                  </p>
+                  <p>
+                    <center>
+                      <a href={post.pdfUrl}>Download Magazine Here</a>
+                    </center>{" "}
+                  </p>
                   <ul className="actions special">
                     <button
                       type="button"

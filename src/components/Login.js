@@ -38,8 +38,8 @@ class Login extends Component {
   }
 
   render() {
-    const { classes } = this.props;
-    const { errors } = this.state;
+    // const { classes } = this.props;
+    // const { errors } = this.state;
 
     return (
       <div id="login-form">
@@ -64,9 +64,11 @@ class Login extends Component {
               onChange={this.onChange}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
+          <center>
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </center>
         </form>
       </div>
     );

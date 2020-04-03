@@ -25,14 +25,14 @@ class Feeds extends Component {
   }
 
   likePost(postId) {
-    this.setState(state => ({
-      like: !state.like
-    }));
-    const post = {
-      factor: this.state.like ? "+" : "-"
-    };
-    this.props.likePost(postId, post);
-    window.location.reload();
+    // this.setState(state => ({
+    //   like: !state.like
+    // }));
+    // const post = {
+    //   factor: this.state.like ? "+" : "-"
+    // };
+    // this.props.likePost(postId, post);
+    // window.location.reload();
   }
 
   render() {
@@ -47,9 +47,6 @@ class Feeds extends Component {
             <ul className="links">
               <li className="active">
                 <a href="/feeds">POSTS</a>
-              </li>
-              <li>
-                <a href="/contactus">CONTACT US</a>
               </li>
             </ul>
             <ul className="icons">
@@ -71,7 +68,6 @@ class Feeds extends Component {
               {posts.map(post => (
                 <article>
                   <header>
-                    <span className="date">{post.title}</span>
                     <h2>
                       <a href={"/post/" + post._id}>{post.title}</a>
                     </h2>
@@ -86,13 +82,6 @@ class Feeds extends Component {
                         View Post
                       </a>
                     </li>
-                    <button
-                      type="button"
-                      className={"like-" + this.state.like}
-                      onClick={this.likePost.bind(this, post._id)}
-                    >
-                      <i className="fa fa-thumbs-up"></i>  Like
-                    </button>
                   </ul>
                 </article>
               ))}{" "}

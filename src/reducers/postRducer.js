@@ -25,7 +25,7 @@ export default function(state = initialState, action) {
         post: action.payload
       };
     case UPLOAD_POST:
-      return Object.assign({}, state.posts, action.payload);
+      return { ...state, posts: [action.payload].concat(state.posts) };
     case UPDATE_POST:
       return Object.assign({}, state.posts, action.payload);
     case LIKE_POST: {
@@ -33,7 +33,7 @@ export default function(state = initialState, action) {
       console.log(updatedPostsState);
       let updatedPost = action.payload;
       let updatedPostIndex = updatedPostsState.findIndex(
-        post => post._id == updatedPost._id
+        post => post._id === updatedPost._id
       );
 
       if (updatedPostIndex > -1) {

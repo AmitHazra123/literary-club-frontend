@@ -15,7 +15,7 @@ class Header extends Component {
   }
 
   render() {
-    const { classes, auth } = this.props;
+    const { auth } = this.props;
     return (
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark py=0 fixed-top">
         <a className="navbar-brand" href="/">

@@ -13,10 +13,10 @@ export default class TeamProfile extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">Amit Hazra</h5>
-              <p className="card-text">
-                Full Stack WebDeveloper , work in frameworks like MongoDB,
-                Express, React, and Node.
-              </p>
+              <p className="card-text">Full Stack WebDeveloper ,</p>
+              <p>work in frameworks like </p>
+              <p>MongoDB, Express, React, </p>
+              <p>and Node.</p>
               <a
                 href="https://m.facebook.com/sattyapriya.right"
                 className="fa fa-facebook"
@@ -39,10 +39,10 @@ export default class TeamProfile extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">Mamtu Raja</h5>
-              <p className="card-text">
-                Front end WebDeveloper , one year experience in
-                Python,Competitive programmer.
-              </p>
+              <p className="card-text">Front end WebDeveloper ,</p>
+              <p>one year experience in</p>
+              <p>Python,Competitive </p>
+              <p>programmer.</p>
               <a
                 href="https://www.facebook.com/Dashing.mamtu"
                 className="fa fa-facebook"
@@ -72,10 +72,10 @@ export default class TeamProfile extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">Subhashis Batobyal</h5>
-              <p className="card-text">
-                Web Developer,Designer with expertise in designing and
-                developing User interfaces.
-              </p>
+              <p className="card-text">Web Developer,Designer</p>
+              <p>with expertise in </p>
+              <p>designing and developing</p>
+              <p>User interfaces.</p>
 
               <a
                 href="https://www.facebook.com/subhashis.batobyal.9"
@@ -106,11 +106,10 @@ export default class TeamProfile extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">Anurag Nayak</h5>
-              <p className="card-text">
-                Competitive coder,ACM Hack-A-Day 2020 finalist(Top 10) and also
-                a Java enthusiast.
-              </p>
-
+              <p className="card-text">Competitive coder,ACM</p>
+              <p>Hack-A-Day 2020 </p>
+              <p>finalist(Top 10) and also a </p>
+              <p>Java enthusiast.</p>
               <a
                 href="https://www.instagram.com/anurag_nayak2020/"
                 className="fa fa-instagram"
@@ -136,10 +135,11 @@ export default class TeamProfile extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">Subhasis Das</h5>
-              <p className="card-text">
-                Full stack web developer and cloud practitioner with 2 years of
-                experience in the MERN stack and AWS.{" "}
-              </p>
+              <p className="card-text">Full stack web developer </p>
+              <p>and cloud practitioner</p>
+              <p>with 2 years of </p>
+              <p>experience in the MERN </p>
+              <p>stack and AWS.</p>
               <a href="https://subhasisdas.me/" className="btn btn-primary">
                 Connect
               </a>

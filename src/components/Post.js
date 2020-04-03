@@ -37,11 +37,6 @@ class Post extends Component {
           <a href="#" className="image main">
             <img src={post.imageUrl} alt="" />
           </a>
-          <ul className="actions special">
-            <button type="button large" className="button large">
-              <i className="fa fa-thumbs-up"></i> Like
-            </button>
-          </ul>
         </article>
       </div>
     );
