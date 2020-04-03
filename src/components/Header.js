@@ -74,9 +74,23 @@ class Header extends Component {
                 alt=""
               />
             </a>
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item">
+                <a href="/admin" className="nav-link nav-item">
+                  {auth.isAuthenticated ? "Dashboard" : ""}
+                </a>
+              </li>
+            </ul>
 
-            <a href="/login" className="btn btn-primary">
-              Login
+            <a
+              onClick={() =>
+                !auth.isAuthenticated
+                  ? (window.location.href = "/login")
+                  : this.logout()
+              }
+              className="btn btn-primary"
+            >
+              {auth.isAuthenticated ? "Logout" : "Login"}
             </a>
           </form>
         </div>

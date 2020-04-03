@@ -43,13 +43,13 @@ class Login extends Component {
 
     return (
       <div id="login-form">
-        <form>
+        <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">User Name</label>
             <input
               type="text"
               className="form-control"
-              name="name"
+              name="username"
               value={this.state.name}
               onChange={this.onChange}
             />
@@ -64,11 +64,7 @@ class Login extends Component {
               onChange={this.onChange}
             />
           </div>
-          <button
-            type="submit"
-            className="btn btn-primary"
-            onSubmit={this.onSubmit}
-          >
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </form>
