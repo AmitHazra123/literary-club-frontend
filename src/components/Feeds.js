@@ -71,6 +71,7 @@ class Feeds extends Component {
                     <h2>
                       <a href={"/post/" + post._id}>{post.title}</a>
                     </h2>
+                    <span className="date">{post.writer}</span>
                   </header>
                   <a href={"/post/" + post._id} className="image fit">
                     <img src={post.imageUrl} alt="" />
