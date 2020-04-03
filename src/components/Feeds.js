@@ -76,7 +76,14 @@ class Feeds extends Component {
                   <a href={"/post/" + post._id} className="image fit">
                     <img src={post.imageUrl} alt="" />
                   </a>
-                  <p>{post.description}</p>
+                  <p>
+                    <center>{post.description}</center>
+                  </p>
+                  <p>
+                    <center>
+                      <a href={post.pdfUrl}>Download Magazine Here</a>
+                    </center>{" "}
+                  </p>
                   <ul className="actions special">
                     <li>
                       <a href={"/post/" + post._id} className="button">
