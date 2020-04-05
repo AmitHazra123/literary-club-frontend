@@ -42,6 +42,7 @@ class InsertPost extends Component {
   onSubmit(e) {
     e.preventDefault();
     let fd = new FormData();
+    if(this.state.title === "") {alert("Title field is required"); return;}
     fd.append("title", this.state.title);
     fd.append("description", this.state.description);
     fd.append("writer", this.state.writer);

@@ -9,17 +9,16 @@ class Login extends Component {
     super(props);
     this.state = {
       username: "",
-      password: "",
-      errors: {}
+      password: ""
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentWillReceiveProps(props) {
-    this.setState({
-      errors: props.errors
-    });
+    if(Object.keys(props.errors).length > 0 && !props.auth.isAuthenticated) {
+      alert(props.errors.error);
+    }
   }
 
   onChange(e) {
@@ -38,9 +37,6 @@ class Login extends Component {
   }
 
   render() {
-    // const { classes } = this.props;
-    // const { errors } = this.state;
-
     return (
       <div id="login-form">
         <form onSubmit={this.onSubmit}>

@@ -12,7 +12,8 @@ class UpdatePost extends Component {
       description: "",
       writer: "",
       imageFile: [],
-      pdfFile: []
+      pdfFile: [],
+      isLoading: false
     };
     this.onChange = this.onChange.bind(this);
     this.onChangeFile = this.onChangeFile.bind(this);
@@ -28,7 +29,8 @@ class UpdatePost extends Component {
     this.setState({
       title: props.post.title,
       description: props.post.description,
-      writer: props.post.writer
+      writer: props.post.writer,
+      isLoading: false
     });
   }
 
@@ -47,6 +49,7 @@ class UpdatePost extends Component {
   onSubmit(e) {
     e.preventDefault();
     let fd = new FormData();
+    if(this.state.title === "") {alert("Title field is required"); return;}
     fd.append("title", this.state.title);
     fd.append("description", this.state.description);
     fd.append("writer", this.state.writer);
@@ -59,6 +62,9 @@ class UpdatePost extends Component {
         this.state.imageFile[0].name
       );
     const postId = this.props.match.params.id;
+    this.setState({
+      isLoading: true
+    });
     this.props.updatePost(postId, fd);
     window.location.href = "/admin";
   }
