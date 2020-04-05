@@ -12,7 +12,9 @@ class UpdatePost extends Component {
       description: "",
       writer: "",
       imageFile: [],
+      imageUrl: "",
       pdfFile: [],
+      pdfUrl: "",
       isLoading: false
     };
     this.onChange = this.onChange.bind(this);
@@ -30,6 +32,8 @@ class UpdatePost extends Component {
       title: props.post.title,
       description: props.post.description,
       writer: props.post.writer,
+      imageUrl: props.post.imageUrl,
+      pdfUrl: props.post.pdfUrl,
       isLoading: false
     });
   }
@@ -107,6 +111,7 @@ class UpdatePost extends Component {
             </div>
             <div className="form-group">
               <label htmlFor="exampleInputPassword1">Image</label>
+              <img src={this.state.imageUrl} width="300" alt="" />
               <input
                 type="file"
                 className="form-control"
@@ -116,6 +121,7 @@ class UpdatePost extends Component {
             </div>
             <div className="form-group">
               <label htmlFor="exampleInputPassword1">Magazine Document</label>
+              <iframe src={this.state.pdfUrl} width="300" alt=""></iframe>
               <input
                 type="file"
                 className="form-control"
