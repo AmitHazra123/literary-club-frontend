@@ -29,10 +29,9 @@ class Post extends Component {
       <div id="main">
         <article className="post featured">
           <header className="major">
-            <span className="date">Featured Post</span>
             <h2>{post.title}</h2>
             <p>{post.description}</p>
-            <a href={post.pdfUrl}>Download Magazine Here</a>
+            <a href={post.pdfUrl}>Download PDF Here</a>
           </header>
           <a href="#" className="image main">
             <img src={post.imageUrl} alt="" />

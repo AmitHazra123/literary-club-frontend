@@ -63,7 +63,7 @@ class AdminPage extends Component {
                   </p>
                   <p>
                     <center>
-                      <a href={post.pdfUrl}>Download Magazine Here</a>
+                      <a href={post.pdfUrl}>Download PDF Here</a>
                     </center>{" "}
                   </p>
                   <ul className="actions special">
