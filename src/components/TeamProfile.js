@@ -13,11 +13,10 @@ export default class TeamProfile extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">Amit Hazra</h5>
-              <p className="card-text">Full Stack WebDeveloper ,</p>
-              <p>work in frameworks like </p>
-              <p>MongoDB, Express, React, </p>
-              <p>and Node.</p>
-              <a
+              <p class="card-text">Full Stack WebDeveloper with 1 year experience, work in frameworks like MongoDB, Express, React, and Node.</p>
+            </div>
+            <div className="card-footer">
+            <a
                 href="https://m.facebook.com/sattyapriya.right"
                 className="fa fa-facebook"
               ></a>
@@ -25,11 +24,36 @@ export default class TeamProfile extends Component {
               <a
                 href="https://www.linkedin.com/mwlite/in/amit-hazra-762227144"
                 className="fa fa-linkedin"
-              ></a>
+              ></a>{" "}
               {/* <!-- <a href="#" className="fa fa-twitter"></a> --> */}
+              <a href="http://amithazraportfolio.s3-website.ap-south-1.amazonaws.com/" className="btn btn-primary" target="blank">
+                Connect
+              </a>
             </div>
           </div>
         </div>
+        
+        <div className="resize">
+          <div className="card" style={{ width: "15rem" }}>
+            <img
+              src={require("../subhasis.jpg")}
+              className="card-img-top"
+              alt="..."
+            />
+            <div className="card-body">
+              <h5 className="card-title">Subhasis Das</h5>
+              <p class="card-text">Full stack web developer and cloud practitioner with 2 years of experience in the MERN stack and AWS. <br/></p>
+            </div>
+            <div className="card-footer">
+            <center>
+            <a href="https://subhasisdas.me/" className="btn btn-primary">
+                Connect
+              </a>
+            </center>
+            </div>
+          </div>
+        </div>
+
         <div className="resize">
           <div className="card" style={{ width: "15rem" }}>
             <img
@@ -39,11 +63,10 @@ export default class TeamProfile extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">Mamtu Raja</h5>
-              <p className="card-text">Front end WebDeveloper ,</p>
-              <p>one year experience in</p>
-              <p>Python,Competitive </p>
-              <p>programmer.</p>
-              <a
+              <p class="card-text">Front end WebDeveloper , one year experience in Python,Competitive programmer.<br/><br/></p>
+            </div>
+            <div className="card-footer">
+            <a
                 href="https://www.facebook.com/Dashing.mamtu"
                 className="fa fa-facebook"
               ></a>
@@ -72,12 +95,11 @@ export default class TeamProfile extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">Subhashis Batobyal</h5>
-              <p className="card-text">Web Developer,Designer</p>
-              <p>with expertise in </p>
-              <p>designing and developing</p>
-              <p>User interfaces.</p>
-
-              <a
+              <p class="card-text">Web Developer,Designer with expertise in designing and developing
+               User interfaces.<br/><br/></p>
+            </div>
+            <div className="card-footer">
+            <a
                 href="https://www.facebook.com/subhashis.batobyal.9"
                 className="fa fa-facebook"
               ></a>
@@ -106,11 +128,11 @@ export default class TeamProfile extends Component {
             />
             <div className="card-body">
               <h5 className="card-title">Anurag Nayak</h5>
-              <p className="card-text">Competitive coder,ACM</p>
-              <p>Hack-A-Day 2020 </p>
-              <p>finalist(Top 10) and also a </p>
-              <p>Java enthusiast.</p>
-              <a
+              <p class="card-text">Competitive coder,ACM Hack-A-Day 2020 finalist(Top 10) and also a Java enthusiast.
+              </p>
+            </div>
+            <div className="card-footer">
+            <a
                 href="https://www.instagram.com/anurag_nayak2020/"
                 className="fa fa-instagram"
               ></a>
@@ -126,26 +148,6 @@ export default class TeamProfile extends Component {
           </div>
         </div>
 
-        <div className="resize">
-          <div className="card" style={{ width: "15rem" }}>
-            <img
-              src={require("../subhasis.jpg")}
-              className="card-img-top"
-              alt="..."
-            />
-            <div className="card-body">
-              <h5 className="card-title">Subhasis Das</h5>
-              <p className="card-text">Full stack web developer </p>
-              <p>and cloud practitioner</p>
-              <p>with 2 years of </p>
-              <p>experience in the MERN </p>
-              <p>stack and AWS.</p>
-              <a href="https://subhasisdas.me/" className="btn btn-primary">
-                Connect
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     );
   }
